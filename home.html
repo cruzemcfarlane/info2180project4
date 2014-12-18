@@ -2,14 +2,48 @@
 <html>
     <head>
         <title>Cheapo Mail</title>
+        <link rel="stylesheet" type="text/css" href="home.css" />
+        <link href="http://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="home.js"></script>
     </head>
     <body>
-        <button>Compose</button><br />
+        <h1>Cheapo Mail</h1>
         
-        <div>
+        <h4>Please select an option:</h4>
+        
+        <button onClick="showCompose()">Compose</button>
+        <button onCLick="showInbox()">Inbox</button>
+        <br /><br />
+        
+        <div id="formElements">
+            <form id="myform">
+                <input type="text" id="subject" placeholder="Subject" /><br />
+                <input type="text" id="recipient" placeholder="Recipient" /><br />
+                <textarea rows="10" cols="50" id="bodytext" class="mytext" placeholder="Body" size="100"></textarea><br />
+                <input type="submit" id="submit" value="Send" /><br /><br />
+            </form>
         </div>
+        
+        <div id="inboxElements" align="center">
+            <table id="table">
+                <tr>
+                    <th>From</th>
+                    <th>Subject</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+            </table>
+        </div>
+        <div id="enter"></div>
     </body>
     <footer>
-        <a href="logout.html">Logout</a>
+        <a href="logout.html"><button>Logout</button></a>
     </footer>
 </html>

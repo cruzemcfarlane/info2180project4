@@ -2,12 +2,16 @@
 <html>
     <head>
         <title>Cheapo Mail</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <script type="text/javascript" src="login.js"></script>
     </head>
     <body>
-        <form>
-            <input type="text" id="logname" placeholder="Username" /><br />
+        <form id="formElements" action="login.php" onsubmit="return runForm()" method="GET">
+            <input type="text" id="idNo" placeholder="ID Number" /><br />
             <input type="password" id="logpass" placeholder="Password" /><br />
-            <input type="image" src="submit.jpg" alt="Submit" width="90px" height="48px" /> 
+            <input type="submit" />
+            <!--<input type="image" src="submit.jpg" alt="Submit" width="90px" height="48px" />--> 
         </form>
+        <div id="enter"></div>
     </body>
 </html>
